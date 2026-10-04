@@ -54,16 +54,19 @@ table {
     --almostBlack: #161616;
     --almostWhite: #e5e5e5;
     --bluegray: #7b9fae;
+    --gold: #cf911c;
     
-    --font: "Anta", sans-serif;
+    --fontBig: "Anta", sans-serif;
+    --fontOther: "Source Sans 3", sans-serif;
 }
 
 body {
     /* width: 1280px; */
-    font-family: var(--font);
+    font-family: var(--fontBig);
     flex-direction: column;
     align-items: center;
     margin: auto;  
+    background-color: var(--almostWhite);
 }
 
 header {
@@ -84,7 +87,6 @@ h1 {
     color: var(--almostWhite);
     font-size: 5em;
     font-weight: bold;
-    margin: 10px, 0px, -20px, 0px;
 }
 
 header p {
@@ -109,8 +111,40 @@ nav a {
     text-decoration: none;
     color: var(--almostBlack);
     font-size: 1.2em;
-    font-weight: 500;
+    font-weight: bold;
     padding: 0.5rem 1rem;
     margin: auto;
     text-align: center;
 }
+
+h2 {
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+}
+
+#about {
+    max-width: 1000px;
+    /* border: 4px solid var(--bluegray);
+    border-radius: 15px;
+    box-shadow: 8px 8px 5px var(--almostBlack); */
+    margin:auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 20px
+}
+
+main p {
+    font-family: var(--fontOther);
+    font-size: 1.6em;
+    padding: 20px 0px 10px 0px;
+    line-height: 1.3;
+}
+
+p i{
+    font-style: italic;
+}
+
+
+
+
