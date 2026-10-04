@@ -51,10 +51,66 @@ table {
 
 /* ROOT Variables */
 :root {
+    --almostBlack: #161616;
+    --almostWhite: #e5e5e5;
+    --bluegray: #7b9fae;
+    
     --font: "Anta", sans-serif;
 }
 
 body {
-    width: 1280px;
+    /* width: 1280px; */
     font-family: var(--font);
+    flex-direction: column;
+    align-items: center;
+    margin: auto;  
+}
+
+header {
+    background-color: var(--almostBlack);
+}
+header svg {
+    float: left;
+    width: 100px;
+    height: 100px;
+    stroke: var(--almostWhite);
+    fill: var(--almostWhite);
+    margin: 10px;
+    padding: 10px;
+}
+h1 {
+    text-align: left;
+    padding-top: 10px;
+    color: var(--almostWhite);
+    font-size: 5em;
+    font-weight: bold;
+    margin: 10px, 0px, -20px, 0px;
+}
+
+header p {
+    font-size: 2em;
+    color: var(--almostWhite);
+    text-align: left;
+    margin-top: 0;
+    padding-bottom: 30px;
+}
+
+nav {
+    display: flex;
+    background-color: var(--bluegray);
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: auto;
+    color: var(--almostBlack);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--almostBlack);
+    font-size: 1.2em;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    margin: auto;
+    text-align: center;
 }
