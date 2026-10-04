@@ -163,10 +163,17 @@ p i{
 
 #productCards figure {
     width: 400px;
+    min-height:500px;
     margin: 30px;
-    border: 4px solid var(--gold);
+    /* border: 3px solid var(--bluegray); */
     border-radius: 10px;
+    box-shadow: 6px 6px 5px var(--almostBlack);
     padding: 10px;
+}
+
+.prodCard {
+        border: 3px solid var(--bluegray);
+
 }
 
 .prodPic {
@@ -223,7 +230,18 @@ figure button:hover {
     color: var(--almostWhite);
     border: 2px solid var(--bluegray);
     border-radius: 10px;
+    
+}
+
+figure button:active {
+    background-color: var(--almostBlack);
+    font-family: var(--fontBig);
+    font-weight: bold;
+    color: var(--almostWhite);
+    border: 2px solid var(--bluegray);
+    border-radius: 10px;
     box-shadow: none;
+    translate: 3px 3px;
 }
 
 
