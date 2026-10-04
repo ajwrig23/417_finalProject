@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Anta&family=Prosto+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anta&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 /* CSS Reset */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -57,7 +57,7 @@ table {
     --gold: #cf911c;
     
     --fontBig: "Anta", sans-serif;
-    --fontOther: "Prosto One", sans-serif;
+    --fontOther: "Montserrat", sans-serif;
 }
 
 body {
@@ -142,13 +142,88 @@ section {
 main p {
     font-family: var(--fontOther);
     font-size: 1.3em;
-    font-weight: 200;
+    font-weight: 400;
     padding: 20px 0px 10px 0px;
-    line-height: 1.3;
+    line-height: 1.4;
 }
 
 p i{
     font-style: italic;
+}
+
+#products div {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+#products p {
+    text-align: center;
+}
+
+#productCards figure {
+    width: 400px;
+    margin: 30px;
+    border: 4px solid var(--gold);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.prodPic {
+   max-width: 400px;
+
+}
+
+figure h3 {
+    font-size: 2.1em;
+    font-weight: bold;
+    color: var(--gold);
+    margin-bottom: 10px; 
+}
+
+figcaption {
+    font-family: var(--fontOther);
+    font-size: 1em;
+    color: var(--almostBlack);
+    margin: 10px 0px
+}
+
+figure.TS h3 {
+    color: red;
+}
+
+.TS p {
+    font-weight: 500;
+    font-size: 1.7em;
+    color: red;
+}
+
+figure.TS {
+    border: 8px dashed red;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+figure button {
+    float: right;
+    background-color: var(--bluegray);
+    font-family: var(--fontBig);
+    font-weight: bold;
+    color: var(--almostBlack);
+    border: 2px solid var(--almostWhite);
+    border-radius: 10px;
+    box-shadow: 4px 4px 3px var(--almostBlack);
+
+}
+
+figure button:hover {
+    background-color: var(--almostBlack);
+    font-family: var(--fontBig);
+    font-weight: bold;
+    color: var(--almostWhite);
+    border: 2px solid var(--bluegray);
+    border-radius: 10px;
+    box-shadow: none;
 }
 
 
