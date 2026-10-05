@@ -24,7 +24,7 @@
         <nav>
             <a href="#about">About us</a>
             <a href="#products">Current Stock</a>
-            <a href="#contact">Contact Us</a>
+            <a href="#contact">Get Verified</a>
         </nav>
     </header>
     <main>
@@ -44,7 +44,7 @@
                 <figure class="prodCard">
                     <h3>Welwala Cap</h3>
                     <img src="images/millerhat.jpg" class="prodPic" alt="A dusty old hat with feathers in the headband.">
-                    <figcaption>It'll keep the rain of your head. You know, if you ever actually see any.</figcaption>
+                    <figcaption>It'll keep the rain off of your head. You know, if you ever actually see any.</figcaption>
                     <span>¥8,750.00</span>
                     <button id="capButton" type="button">Load Shuttle</button>            
                 </figure>                          
@@ -70,6 +70,30 @@
                     <h3>CLASSIFIED</h3>
                     <p>If you want to see this item you must tell us who you are. We can't be selling this stuff to just anybody!</p>
                 </figure>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>WHO ARE YOU?!</h2>
+            <p>Tell us who you are and we just <i>might</i> give you access to our exclusive products.</p>
+            <div>
+                <img src="images/drummer.jpg" alt="An angry looking woman staring at the camera.">
+                <form>
+                    <label for="fullname">Enter Your Full Name: </label>
+                    <input type="text" name="fullname" id="fname">
+                    <label for="phone">Enter Your Phone Number: </label>
+                    <input type="tel" name="phone" id="pnum">
+                    <label for="email">Enter Your Email: </label>
+                    <input type="email" name="email" id="email">
+                    <label for="comments">Comments: </label>
+                    <textarea name="comments" id="comments" rows="6" cols="25"></textarea>
+                    <fieldset>
+                        <legend>How would you like us to contact you?</legend>
+                        <input type="radio" id="phonechoice" name="contmethod" value="Telephone">
+                        <label for="phonechoice">Telephone</label>
+                        <input type="radio" id="emailchoice" name="contmethod" value="Email">
+                        <label for="emailchoice">Email</label>
+                    </fieldset>
+                </form>
             </div>
         </section>
     </main>
