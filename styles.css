@@ -74,7 +74,40 @@ header {
     max-width: 1280px;
     margin: auto;
 }
-header svg {
+
+.daynight {
+    background: transparent;
+    border: none;
+}
+
+.daynight:hover path {
+    fill: var(--gold);
+    cursor: pointer;
+}
+#sol {
+    width: 30px;
+    height: 30px;
+    float: right;
+    position: relative;
+    top: 20px;
+    right: 20px;
+}
+
+#luna {
+    width: 30px;
+    height: 30px;
+    float: right;
+    position: relative;
+    top: 20px;
+    right: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+
+#opa {
     float: left;
     width: 100px;
     height: 100px;
@@ -140,6 +173,12 @@ h2 {
     margin:auto;
     padding: 40px 20px 80px 20px;
     border-bottom: 5px solid var(--bluegray);
+    justify-content: center;
+}
+
+#about p {
+    max-width: 1000px;
+    margin: auto;
 }
 
 main p {
@@ -162,14 +201,15 @@ p i{
     background-color: var(--almostWhite);
     margin:auto;
     padding: 40px 20px 80px 20px;
-    align-items: center;
+    align-content: center;
+    justify-content: center;
 }
 
 #products div {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 500px 500px;
     margin: auto;
-    padding: 0px 120px;
+    justify-content: center;
 }
 
 #products p {
@@ -271,12 +311,8 @@ figure button:active {
 
 #contact {
     max-width: 1240px;
-    /* border: 4px solid var(--bluegray);
-    border-radius: 15px;
-    box-shadow: 8px 8px 5px var(--almostBlack); */
     background-color: var(--bluegray);
     margin:auto;
-    margin-bottom: 40px;
     padding: 40px 20px 80px 20px;
     align-content: center;
 }
@@ -286,16 +322,44 @@ figure button:active {
 }
 
 #contact div {
-    display: flex;
+    display: grid;
+    grid-template-columns: 500px 500px;
+    justify-content: center;
     margin: auto;
-    padding: 40px 120px;  
+    padding: 40px 100px;  
 }
 
 #contact form {
     display: flex;
     flex-direction: column;
-    margin-left: 40px;
-    width: 500px;
+    padding: 0px 20px;
+}
+
+footer {
+    max-width: 1280px;
+    padding: 0px 0px 10px;
+    margin: auto;
+    margin-top: 0px;
+    align-items: center;
+}
+address {
+    text-align: center;
+    padding: 30px 0px;
+
+}
+address p {
+    color: var(--almostWhite);
+    font-family: var(--fontOther);
+    font-weight: 600;
+    line-height: 1em;
+    
+}
+
+address a {
+    text-decoration: none;
+    color: var(--gold);
+    font-family: var(--fontOther);
+    font-weight: 600;
 }
 
 
