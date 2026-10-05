@@ -164,11 +164,8 @@ h2 {
     margin: auto;
 }
 
-#about {
+.about {
     max-width: 1240px;
-    /* border: 4px solid var(--bluegray);
-    border-radius: 15px;
-    box-shadow: 8px 8px 5px var(--almostBlack); */
     background-color: var(--almostWhite);
     margin:auto;
     padding: 40px 20px 80px 20px;
@@ -176,7 +173,7 @@ h2 {
     justify-content: center;
 }
 
-#about p {
+.about > p {
     max-width: 1000px;
     margin: auto;
 }
@@ -193,11 +190,8 @@ p i{
     font-style: italic;
 }
 
-#products {
+.products {
     max-width: 1240px;
-    /* border: 4px solid var(--bluegray);
-    border-radius: 15px;
-    box-shadow: 8px 8px 5px var(--almostBlack); */
     background-color: var(--almostWhite);
     margin:auto;
     padding: 40px 20px 80px 20px;
@@ -205,18 +199,18 @@ p i{
     justify-content: center;
 }
 
-#products div {
+.products div {
     display: grid;
     grid-template-columns: 500px 500px;
     margin: auto;
     justify-content: center;
 }
 
-#products p {
+.products > p {
     text-align: center;
 }
 
-#productCards figure {
+figure {
     width: 400px;
     min-height:500px;
     margin: 30px;
@@ -236,14 +230,14 @@ p i{
 
 }
 
-.prodCard h3 {
+h3 {
     font-size: 2.1em;
     font-weight: bold;
     color: var(--gold);
     margin-bottom: 10px; 
 }
 
-.prodCard figcaption {
+figcaption {
     font-family: var(--fontOther);
     font-size: 1em;
     color: var(--almostBlack);
@@ -309,7 +303,7 @@ figure button:active {
     translate: 3px 3px;
 }
 
-#contact {
+.contact {
     max-width: 1240px;
     background-color: var(--bluegray);
     margin:auto;
@@ -317,11 +311,11 @@ figure button:active {
     align-content: center;
 }
 
-#contact p {
+.contact p {
     text-align: center;
 }
 
-#contact div {
+.contact div {
     display: grid;
     grid-template-columns: 500px 500px;
     justify-content: center;
@@ -329,7 +323,7 @@ figure button:active {
     padding: 40px 100px;  
 }
 
-#contact form {
+.contact form {
     display: flex;
     flex-direction: column;
     padding: 0px 20px;
@@ -361,6 +355,7 @@ address a {
     font-family: var(--fontOther);
     font-weight: 600;
 }
+
 
 
 
