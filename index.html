@@ -74,21 +74,21 @@
                     <img src="images/millerhat.jpg" class="prodPic" alt="A dusty old hat with feathers in the headband.">
                     <figcaption>It'll keep the rain off of your head. You know, if you ever actually see any.</figcaption>
                     <span>¥8,750.00</span>
-                    <button id="capButton" type="button">Load Shuttle</button>            
+                    <button id="capButton" type="button" class="buttons">Load Shuttle</button>            
                 </figure>                          
                 <figure class="prodCard">
                     <h3>MCRN Mug</h3>
                     <img src="images/mug.jpg" class="prodPic" alt="A red MCRN mug with black text and logo">
                     <figcaption>Somewhere a duster is missing their favorite mug. Who knew coffee could taste so sweet?!</figcaption>
                     <span>¥4,000.00</span>
-                    <button id="mugButton" type="button">Load Shuttle</button>             
+                    <button id="mugButton" type="button" class="buttons">Load Shuttle</button>             
                 </figure>                
                 <figure class="prodCard">
                     <h3>Angel On Your Shoulder</h3>
                     <img src="images/devilpin.jpg" class="prodPic" alt="A pin made of shiny metal showing a smiling demon with horns.">
                     <figcaption>Whoever got away with this and made it back is one lucky sucker. We never said it was a good angel, but it might bring you luck!</figcaption>
                     <span>¥9,265.00</span>
-                    <button id="devilButton" type="button">Load Shuttle</button>            
+                    <button id="devilButton" type="button" class="buttons">Load Shuttle</button>            
                 </figure>
                 <article class="TS">
                     <h3>CLASSIFIED</h3>
@@ -108,12 +108,16 @@
                 <form>
                     <label for="fname">Enter Your Full Name: </label>
                     <input type="text" name="fullname" id="fname">
+                    <span id="nameError" class="errorSpan hidden"></span>
                     <label for="pnum">Enter Your Phone Number: </label>
                     <input type="tel" name="phone" id="pnum">
+                    <span id="phoneError" class="errorSpan hidden"></span>
                     <label for="email">Enter Your Email: </label>
                     <input type="email" name="email" id="email">
+                    <span id="emailError" class="errorSpan hidden"></span>
                     <label for="comments">Comments: </label>
                     <textarea name="comments" id="comments" rows="6" cols="25"></textarea>
+                    <span id="commentError" class="errorSpan hidden"></span>
                     <fieldset>
                         <legend>How would you like us to contact you?</legend>
                         <input type="radio" id="phonechoice" name="contmethod" value="Telephone">
@@ -121,6 +125,9 @@
                         <input type="radio" id="emailchoice" name="contmethod" value="Email">
                         <label for="emailchoice">Email</label>
                     </fieldset>
+                    <span id="contactError" class="errorSpan hidden"></span>
+                    <button id="formSubmit" type="button" class="buttons">Submit</button>
+                    </span>
                 </form>
             </div>
         </section>

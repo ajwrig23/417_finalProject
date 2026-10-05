@@ -279,7 +279,7 @@ article p {
 
 
 
-figure button {
+.buttons {
     float: right;
     background-color: var(--bluegray);
     font-family: var(--fontBig);
@@ -291,7 +291,7 @@ figure button {
 
 }
 
-figure button:hover {
+.buttons:hover {
     background-color: var(--almostBlack);
     font-family: var(--fontBig);
     font-weight: bold;
@@ -301,7 +301,7 @@ figure button:hover {
     
 }
 
-figure button:active {
+.buttons:active {
     background-color: var(--almostBlack);
     font-family: var(--fontBig);
     font-weight: bold;
@@ -378,6 +378,13 @@ figcaption.night {
 
 figure.night {
     border-color: var(--gold);
+}
+
+.errorSpan {
+    font-family: var(--fontOther);
+    font-weight: bold;
+    color: red;
+    padding: 5px 0px;
 }
 
 
