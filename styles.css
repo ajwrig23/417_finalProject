@@ -69,6 +69,8 @@ body {
     background-color: var(--almostBlack);
 }
 
+
+
 header {
     background-color: var(--almostBlack);
     max-width: 1280px;
@@ -244,15 +246,22 @@ figcaption {
     margin: 10px 0px
 }
 
-figure.TS {
+article {
     display: flex;
     flex-direction: column;
     border: 8px dashed red;
     border-radius: 10px;
-    padding: 10px;
+    padding: 10px;    width: 400px;
+    min-height:500px;
+    margin: 30px;
+    /* border: 3px solid var(--bluegray); */
+    border-radius: 10px;
+    box-shadow: 6px 6px 5px var(--almostBlack);
+    /* padding: 10px; */
+
 }
 
-figure.TS h3 {
+article h3 {
     text-align: center;
      font-size: 2.1em;
     font-weight: bold;
@@ -260,7 +269,7 @@ figure.TS h3 {
 }
 
 
-figure.TS p {
+article p {
     font-weight: 500;
     font-size: 1.7em;
     color: red;
@@ -356,6 +365,20 @@ address a {
     font-weight: 600;
 }
 
+section.night {
+    background-color: var(--almostBlack);
+    color: var(--almostWhite);
+    border-bottom: 5px solid var(--gold);
+ 
+}
+
+figcaption.night {
+    color: var(--almostWhite);
+}
+
+figure.night {
+    border-color: var(--gold);
+}
 
 
 
