@@ -178,8 +178,8 @@ function fillCart(e){
     console.log(subTotalAmt);
     totalPrice = subTotalAmt + (subTotalAmt * .127) + 100;
     console.log(totalPrice.toFixed(2));
-    subTot.innerHTML = "¥" + parseFloat(subTotalAmt.toFixed(2)) + ".00";
-    total.innerHTML = "¥" + parseFloat(totalPrice.toFixed(2));
+    subTot.innerHTML = "¥" + parseFloat(subTotalAmt).toFixed(2);
+    total.innerHTML = "¥" + parseFloat(totalPrice).toFixed(2);
 }
 let capButt = document.getElementById("capButton");
 let mugButt = document.getElementById("mugButton");
