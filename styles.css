@@ -387,5 +387,14 @@ figure.night {
     padding: 5px 0px;
 }
 
+#validForm {
+    font-weight: bold;
+    color: var(--gold);
+    background-color: var(--almostBlack);
+    border-radius: 15px;
+    margin: 20px 0px;
+    padding: 10px;
+}
+
 
 
