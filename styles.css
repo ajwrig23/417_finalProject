@@ -298,7 +298,7 @@ div.TS {
     display: grid;
     grid-template-columns: 90px 90px;
     gap: 10px 20px;
-    justify-items: center;
+    justify-items: right;
     border-top: 3px solid var(--gold);
     padding-top: 15px;
     position: absolute;
@@ -306,12 +306,39 @@ div.TS {
 }
 
 
-#cart button {
+#checkout {
     background-color: var(--gold);
+    border: none;
     width: 180px;
     position: absolute;
     bottom: 10px;
     font-size: 1em;
+}
+
+#clear {
+    background-color: var(--gold);
+    width: 60px;
+    padding: 2px 5px;
+    border: none;
+    position: absolute;
+    top: 45px;
+    right:10px;
+    align-items: center;    
+}
+
+#clear:hover, #checkout:hover {
+    cursor: pointer;
+    color: white;
+    background-color: red;
+    border-color: var(--gold);
+}
+
+#cart ul {
+    justify-items: right;
+}
+
+#cart li {
+    padding: 10px 0px;
 }
 
 #cart span{
@@ -352,6 +379,7 @@ h4 {
     color: var(--almostWhite);
     border: 2px solid var(--bluegray);
     border-radius: 10px;
+    cursor: pointer;
     
 }
 
@@ -391,6 +419,7 @@ h4 {
     flex-direction: column;
     padding: 0px 20px;
 }
+
 
 footer {
     max-width: 1280px;

@@ -162,18 +162,23 @@ let itemList = document.getElementById("shopList");
 let items = [];
 let subTotalAmt = 0.00;
 let totalPrice;
+let itemOut = "";
 
 function fillCart(e){
     console.log(e.target.id);
     let selection = e.target.id
-    items.push(`<li>${prod[selection].name} ¥${prod[selection].price.toFixed(2)}</li>`)
-    itemList.innerHTML = items
+    let itemLi = `<li>${prod[selection].name} ¥${prod[selection].price.toFixed(2)}</li>`
+    // let itemPush = items.push(`<li>${prod[selection].name} ¥${prod[selection].price.toFixed(2)}</li>`);    
+    if(itemOut.indexOf(itemLi) == -1) {
+        itemOut += " " + itemLi;
+    }
+    itemList.innerHTML = itemOut;
     document.getElementById(selection).classList.add('hidden');
     subTotalAmt += prod[selection].price;
     console.log(subTotalAmt);
     totalPrice = subTotalAmt + (subTotalAmt * .127) + 100;
     console.log(totalPrice.toFixed(2));
-    subTot.innerHTML = "¥" + parseFloat(subTotalAmt.toFixed(2));
+    subTot.innerHTML = "¥" + parseFloat(subTotalAmt.toFixed(2)) + ".00";
     total.innerHTML = "¥" + parseFloat(totalPrice.toFixed(2));
 }
 let capButt = document.getElementById("capButton");
@@ -186,6 +191,9 @@ function resetProd(e) {
     for(let i of buttonList) {
         i.classList.remove("hidden");
     }
+    itemOut = "";
+    subTotalAmt = 0;
+    totalPrice = 0
     subTot.innerHTML = "¥0.00";
     total.innerHTML = "¥0.00";
     itemList.innerHTML = "BIG EMPTY";
@@ -205,5 +213,7 @@ document.getElementById("mugButton").addEventListener("click", fillCart);
 document.getElementById("devilButton").addEventListener("click", fillCart);
 document.getElementById("protoButton").addEventListener("click", fillCart);
 document.getElementById("nukeButton").addEventListener("click", fillCart);
-document.getElementById("checkout").addEventListener("click", resetProd);
 
+//resetProd listeners
+document.getElementById("checkout").addEventListener("click", resetProd);
+document.getElementById("clear").addEventListener("click", resetProd);
