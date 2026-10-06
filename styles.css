@@ -104,9 +104,6 @@ header {
     right: 20px;
 }
 
-.hidden {
-    display: none;
-}
 
 
 #opa {
@@ -212,7 +209,11 @@ p i{
     text-align: center;
 }
 
-figure {
+.productCards > div {
+    /* display: grid;
+    grid-template-columns: auto auto;
+    margin: auto;
+    justify-content: center; */
     width: 400px;
     min-height:500px;
     margin: 30px;
@@ -222,14 +223,17 @@ figure {
     padding: 10px;
 }
 
-.prodCard {
-        border: 3px solid var(--bluegray);
-
+div.prodCard {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid var(--bluegray);
+    justify-items: center;
+    
 }
 
-.prodPic {
-   max-width: 400px;
-
+figure img {
+    max-width: 400px;
+    
 }
 
 h3 {
@@ -246,38 +250,82 @@ figcaption {
     margin: 10px 0px
 }
 
-article {
+div.TS {
     display: flex;
     flex-direction: column;
     border: 8px dashed red;
     border-radius: 10px;
-    padding: 10px;    width: 400px;
+    padding: 10px;    
+    width: 400px;
     min-height:500px;
     margin: 30px;
     /* border: 3px solid var(--bluegray); */
     border-radius: 10px;
     box-shadow: 6px 6px 5px var(--almostBlack);
     /* padding: 10px; */
-
+    
 }
 
-article h3 {
+.TS article h3 {
     text-align: center;
-     font-size: 2.1em;
+    font-size: 3.2em;
     font-weight: bold;
     color: red;
 }
 
 
-article p {
+.TS article p {
     font-weight: 500;
     font-size: 1.7em;
     color: red;
     vertical-align: center;
+    text-align: center;
+    justify-items: center;
+}
+
+#cart {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    background-color: var(--bluegray);
+    justify-self: right;
+    justify-items: center;
+    align-items: center;
+    position: relative;
+}
+
+#cart article {
+    display: grid;
+    grid-template-columns: 90px 90px;
+    gap: 10px 20px;
+    justify-items: center;
+    border-top: 3px solid var(--gold);
+    padding-top: 15px;
+    position: absolute;
+    bottom: 60px;
 }
 
 
+#cart button {
+    background-color: var(--gold);
+    width: 180px;
+    position: absolute;
+    bottom: 10px;
+    font-size: 1em;
+}
 
+h4 {
+    font-size: 1.1em;
+    font-weight: bold;
+    background-color: var(--almostBlack);
+    border-radius: 5px;
+    padding: 10px;
+    color: var(--gold);
+    outline: 3px dashed var(--gold);
+    outline-offset: -3px;
+    position: absolute;
+    top: 10px;
+}
 
 .buttons {
     float: right;
@@ -288,7 +336,9 @@ article p {
     border: 2px solid var(--almostWhite);
     border-radius: 10px;
     box-shadow: 4px 4px 3px var(--almostBlack);
-
+    padding: 10px 0px;
+    margin-top: 10px;
+    
 }
 
 .buttons:hover {
@@ -348,7 +398,7 @@ footer {
 address {
     text-align: center;
     padding: 30px 0px;
-
+    
 }
 address p {
     color: var(--almostWhite);
@@ -369,15 +419,11 @@ section.night {
     background-color: var(--almostBlack);
     color: var(--almostWhite);
     border-bottom: 5px solid var(--gold);
- 
+    
 }
 
 figcaption.night {
     color: var(--almostWhite);
-}
-
-figure.night {
-    border-color: var(--gold);
 }
 
 .errorSpan {
@@ -401,4 +447,11 @@ figure.night {
 }
 
 
+.hidden {
+    display: none;
+}
+
+div.hidden {
+    display: none;
+}
 

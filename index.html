@@ -11,7 +11,7 @@
     <header>
         <!-- <img src="images/opa.svg" alt="OPA logo"> -->
          <svg id="opa" data-name="Livello 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 94.05 89.64">
-            <g id="opa" data-name="opa">
+            <g id="opa1" data-name="opa">
                 <g>
                 <path d="M65.5,61.09h26.37c-3.76,12.48-13.04,22.99-24.78,28.54L46.86,13.12l-19.82,76.42c-.18.2-.36.02-.54-.07-11.51-5.5-20.64-16.23-24.45-28.39h26.57s.04-.57.09-.8c1.05-4.58,2.39-9.31,3.57-13.88,3.81-14.67,7.48-29.42,11.46-44.05.11-.4.5-1.97.63-2.14.18-.22.35-.18.59-.2.6-.05,4.47-.05,4.68.1,5.41,20.26,10.66,40.63,15.85,60.96ZM27.03,66.84H10.77c1.62,2.81,3.47,5.52,5.65,7.93.87.96,6.04,5.96,6.94,5.95l3.67-13.88ZM83.15,66.84h-16.06l3.67,13.88c.2,0,1.68-1.15,1.98-1.39,3.73-2.98,7.38-7.1,9.78-11.23.1-.18.69-1.21.63-1.25Z"/>
                 <path d="M36.75,7.08c-2.35.64-3.85,1.25-4.61,1.53-3.54,1.34-7.03,3.35-10.04,5.62C9.48,23.75,3.33,39.97,6.61,55.54H.66c-1.75-11.02-.06-22.33,5.59-31.98C13.18,11.72,24.71,3.49,38.24.84"/>
@@ -68,50 +68,79 @@
         <section id="products" class="products">
             <h2>Current Stock</h2>
             <p>See what are scrupulous purveyors have found this cycle in and around the system!</p>
-            <div id="productCards" class="productCards">                
-                <figure class="prodCard">
-                    <h3>Welwala Cap</h3>
-                    <img src="images/millerhat.jpg" class="prodPic" alt="A dusty old hat with feathers in the headband.">
-                    <figcaption>It'll keep the rain off of your head. You know, if you ever actually see any.</figcaption>
+            <div id="productCards" class="productCards">
+                <div class="prodCard">
+                    <figure>
+                        <h3>Welwala Cap</h3>
+                        <img src="images/millerhat.jpg" class="prodPic" alt="A dusty old hat with feathers in the headband.">
+                        <figcaption>It'll keep the rain off of your head. You know, if you ever actually see any.</figcaption>
+                    </figure>
                     <span>¥8,750.00</span>
-                    <button id="capButton" type="button" class="buttons">Load Shuttle</button>            
-                </figure>                          
-                <figure class="prodCard">
-                    <h3>MCRN Mug</h3>
-                    <img src="images/mug.jpg" class="prodPic" alt="A red MCRN mug with black text and logo">
-                    <figcaption>Somewhere a duster is missing their favorite mug. Who knew coffee could taste so sweet?!</figcaption>
+                    <button id="capButton" type="button" class="buttons">Load Shuttle</button>
+                </div>                          
+                <div class="prodCard">
+                    <figure>
+                        <h3>MCRN Mug</h3>
+                        <img src="images/mug.jpg" class="prodPic" alt="A red MCRN mug with black text and logo">
+                        <figcaption>Somewhere a duster is missing their favorite mug. Who knew coffee could taste so sweet?!</figcaption>
+                    </figure>
                     <span>¥4,000.00</span>
-                    <button id="mugButton" type="button" class="buttons">Load Shuttle</button>             
-                </figure>                
-                <figure class="prodCard">
-                    <h3>Angel On Your Shoulder</h3>
-                    <img src="images/devilpin.jpg" class="prodPic" alt="A pin made of shiny metal showing a smiling demon with horns.">
-                    <figcaption>Whoever got away with this and made it back is one lucky sucker. We never said it was a good angel, but it might bring you luck!</figcaption>
+                    <button id="mugButton" type="button" class="buttons">Load Shuttle</button>
+                </div>
+                <div class="prodCard">
+                    <figure>
+                        <h3>Angel On Your Shoulder</h3>
+                        <img src="images/devilpin.jpg" class="prodPic" alt="A pin made of shiny metal showing a smiling demon with horns.">
+                        <figcaption>Whoever got away with this and made it back is one lucky sucker. We never said it was a good angel, but it might bring you luck!</figcaption>
+                    </figure>
                     <span>¥9,265.00</span>
-                    <button id="devilButton" type="button" class="buttons">Load Shuttle</button>            
-                </figure>
-                <figure id="protomolecule" class="prodCard hidden">
-                    <h3>Protomolecule</h3>
-                    <img src="images/protoMolecule.jpg" class="prodPic" alt="Blue crystals and goo.">
-                    <figcaption>We don't really know where it came from or what it does but that doesn't we can't fun with it! Rub it, lick it, take it for a swim, the possibilities are endless!</figcaption>
+                    <button id="devilButton" type="button" class="buttons">Load Shuttle</button>
+                </div>
+                <div id="protomolecule" class="prodCard hidden">
+                    <figure>
+                        <h3>Protomolecule</h3>
+                        <img src="images/protoMolecule.jpg" class="prodPic" alt="Blue crystals and goo.">
+                        <figcaption>We don't really know where it came from or what it does but that doesn't mean we can't have fun with it! Rub it, lick it, take it for a swim. The possibilities are endless!</figcaption>
+                    </figure>
                     <span>¥125,000.00</span>
-                    <button id="protoButton" type="button" class="buttons">Load Shuttle</button>            
-                </figure>
-                <figure id="nucular" class="prodCard hidden">
-                    <h3>UNN Nuke</h3>
-                    <img src="images/nuke.jpg" class="prodPic" alt="A nuclear space missile.">
-                    <figcaption>Our wranglers really out did themselves when they rustled up this free range, artisanal nuke the inners just left floating around the expanse. It can be yours but it ain't gonna be cheap!</figcaption>
+                    <button id="protoButton" type="button" class="buttons">Load Shuttle</button>
+                </div>
+                <div id="nucular" class="prodCard hidden">
+                    <figure>
+                        <h3>UNN Nuke</h3>
+                        <img src="images/nuke.jpg" class="prodPic" alt="A nuclear space missile.">
+                        <figcaption>Our wranglers really out did themselves when they rustled up this free range, artisanal nuke the inners just left floating around the expanse. It can be yours but it ain't gonna be cheap!</figcaption>
+                    </figure>
                     <span>¥5,000,000.00</span>
-                    <button id="devilButton" type="button" class="buttons">Load Shuttle</button>            
-                </figure>
-                <article id="tsone" class="TS">
-                    <h3>CLASSIFIED</h3>
-                    <p>If you want to see this item you must tell us who you are. We can't be selling this stuff to just anybody!</p>
-                </article>
-                <article id="tstwo" class="TS">
-                    <h3>CLASSIFIED</h3>
-                    <p>If you want to see this item you must tell us who you are. We can't be selling this stuff to just anybody!</p>
-                </article>
+                    <button id="nukeButton" type="button" class="buttons">Load Shuttle</button>
+                </div>
+                <div id="tsone" class="TS">
+                    <article>
+                        <h3>CLASSIFIED</h3>
+                        <p>If you want to see this item you must tell us who you are. We can't be selling this stuff to just anybody!</p>
+                    </article>
+                </div>
+                <div id="tstwo" class="TS">
+                    <article>
+                        <h3>CLASSIFIED</h3>
+                        <p>If you want to see this item you must tell us who you are. We can't be selling this stuff to just anybody!</p>
+                    </article>
+                </div>
+                <div id="cart">
+                    <h4>DELIVERY SHUTTLE</h4>
+                    <ul id="shopList"></ul>
+                    <article>
+                        <span>Sub-Total:</span>
+                        <span>¥0.00</span>
+                        <span>Tax Rate:</span>
+                        <span>12.7%</span>
+                        <span>Shipping:</span>
+                        <span>¥100.00</span>
+                        <span>Total:</span>
+                        <span>¥0.00</span>
+                    </article>
+                    <button id="checkout" type="button" class="buttons">Send To Ship</button>
+                </div>
             </div>
         </section>
         <section id="contact" class="contact">
