@@ -167,7 +167,7 @@ let itemOut = "";
 function fillCart(e){
     console.log(e.target.id);
     let selection = e.target.id
-    let itemLi = `<li>${prod[selection].name} ¥${prod[selection].price.toFixed(2)}</li>`
+    let itemLi = `<li>${prod[selection].name} ¥${Math.round(prod[selection].price)}</li>`
     // let itemPush = items.push(`<li>${prod[selection].name} ¥${prod[selection].price.toFixed(2)}</li>`);    
     if(itemOut.indexOf(itemLi) == -1) {
         itemOut += " " + itemLi;
