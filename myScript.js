@@ -15,6 +15,10 @@ function darkmode(){
     let myfigs = document.querySelectorAll("figure");
     for(let el of myfigs) {
         el.classList.toggle("night");
+    let myUl = document.querySelectorAll("ul");
+    for(let el of myUl) {
+        el.classList.toggle("night");
+    }
     }
     document.getElementById("luna").classList.toggle("hidden");
     document.getElementById("sol").classList.toggle("hidden");
@@ -132,27 +136,22 @@ let prod = {
     capButton: {
         price: 8750.00,
         name: "Welwalla Cap",
-        count: 0
     },
     mugButton: {
         price: 4000.00,
         name: "MCRN Mug",
-        count: 0
     },
     devilButton: {
         price: 9265.00,
         name: "Devil Pin",
-        count: 0
     },
     protoButton: {
         price: 125000.00,
         name: "Protomolecule",
-        count: 0
     },
     nukeButton: {
         price: 5000000.00,
         name: "UNN Nuke",
-        count: 0
     }
 };
 
