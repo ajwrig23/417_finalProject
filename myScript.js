@@ -126,6 +126,70 @@ function formValidation(e){
         valForm.classList.add("hidden"); 
     }
 }
+
+//shoppingCart
+let prod = {
+    capButton: {
+        price: 8750.00,
+        name: "Welwalla Cap",
+        count: 0
+    },
+    mugButton: {
+        price: 4000.00,
+        name: "MCRN Mug",
+        count: 0
+    },
+    devilButton: {
+        price: 9265.00,
+        name: "Devil Pin",
+        count: 0
+    },
+    protoButton: {
+        price: 125000.00,
+        name: "Protomolecule",
+        count: 0
+    },
+    nukeButton: {
+        price: 5000000.00,
+        name: "UNN Nuke",
+        count: 0
+    }
+};
+
+let subTot = document.getElementById("subtotal");
+let total = document.getElementById("total");
+let itemList = document.getElementById("shopList");
+let items = [];
+let subTotalAmt = 0.00;
+let totalPrice;
+
+function fillCart(e){
+    console.log(e.target.id);
+    let selection = e.target.id
+    items.push(`<li>${prod[selection].name} ¥${prod[selection].price.toFixed(2)}</li>`)
+    itemList.innerHTML = items
+    document.getElementById(selection).classList.add('hidden');
+    subTotalAmt += prod[selection].price;
+    console.log(subTotalAmt);
+    totalPrice = subTotalAmt + (subTotalAmt * .127) + 100;
+    console.log(totalPrice.toFixed(2));
+    subTot.innerHTML = "¥" + parseFloat(subTotalAmt.toFixed(2));
+    total.innerHTML = "¥" + parseFloat(totalPrice.toFixed(2));
+}
+let capButt = document.getElementById("capButton");
+let mugButt = document.getElementById("mugButton");
+let devilButt = document.getElementById("devilButton");
+let protoButt = document.getElementById("protoButton");
+let nukeButt = document.getElementById("nukeButton");
+let buttonList = [capButt, mugButt, devilButt, protoButt, nukeButt];
+function resetProd(e) {
+    for(let i of buttonList) {
+        i.classList.remove("hidden");
+    }
+    subTot.innerHTML = "¥0.00";
+    total.innerHTML = "¥0.00";
+    itemList.innerHTML = "BIG EMPTY";
+}
         
 
 //darkmode button event listeners
@@ -134,4 +198,12 @@ document.getElementById("sol").addEventListener("click", darkmode);
 
 //form submit/validation event listener
 document.getElementById("formSubmit").addEventListener("click", formValidation);
+
+//fillCart event listeners
+document.getElementById("capButton").addEventListener("click", fillCart);
+document.getElementById("mugButton").addEventListener("click", fillCart);
+document.getElementById("devilButton").addEventListener("click", fillCart);
+document.getElementById("protoButton").addEventListener("click", fillCart);
+document.getElementById("nukeButton").addEventListener("click", fillCart);
+document.getElementById("checkout").addEventListener("click", resetProd);
 

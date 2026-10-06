@@ -7,7 +7,7 @@
     <title>O.P.A.</title>
 </head>
 <body>
-    <script defer src="myScript.js"></script>
+    <script async src="myScript.js"></script>
     <header>
         <!-- <img src="images/opa.svg" alt="OPA logo"> -->
          <svg id="opa" data-name="Livello 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 94.05 89.64">
@@ -128,16 +128,18 @@
                 </div>
                 <div id="cart">
                     <h4>DELIVERY SHUTTLE</h4>
-                    <ul id="shopList"></ul>
+                    <ul id="shopList">
+                        <li>BIG EMPTY</li>
+                    </ul>
                     <article>
                         <span>Sub-Total:</span>
-                        <span>¥0.00</span>
+                        <span id="subtotal">¥0.00</span>
                         <span>Tax Rate:</span>
                         <span>12.7%</span>
                         <span>Shipping:</span>
                         <span>¥100.00</span>
                         <span>Total:</span>
-                        <span>¥0.00</span>
+                        <span id="total">¥0.00</span>
                     </article>
                     <button id="checkout" type="button" class="buttons">Send To Ship</button>
                 </div>

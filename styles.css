@@ -314,6 +314,10 @@ div.TS {
     font-size: 1em;
 }
 
+#cart span{
+    color: var(--almostBlack);
+}
+
 h4 {
     font-size: 1.1em;
     font-weight: bold;
