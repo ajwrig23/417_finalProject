@@ -396,5 +396,9 @@ figure.night {
     padding: 10px;
 }
 
+#validForm a {
+    color: var(--bluegray);
+}
+
 
 

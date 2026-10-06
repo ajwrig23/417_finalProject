@@ -36,6 +36,10 @@ let emErr = document.getElementById("emailError");
 let comErr = document.getElementById("commentError");
 let chErr = document.getElementById("contactError");
 let valForm = document.getElementById("validForm");
+let proto = document.getElementById("protomolecule");
+let nuke = document.getElementById("nucular");
+let tSecOne = document.getElementById("tsone");
+let tSecTwo = document.getElementById("tstwo");
 function formValidation(e){
     e.preventDefault();
     let errCount = 0
@@ -89,12 +93,22 @@ function formValidation(e){
     if(errCount == 0) {
         let str = "";
         if(eChoice.checked) {
-            str = `Oye ${fname.value}, you have been granted access to exclusive products!<br> We will email you at ${email.value} to let you know when new items are available.`
+            str = `Oye ${fname.value}, you have been granted access to exclusive products!<br> We will email you at ${email.value} to let you know when new items are available.<br><a href="#products">Go Back To Current Stock</a>`;
         }else {
-            str = `Oye ${fname.value}, you have been granted access to exclusive products!<br> We will text you at ${pNum.value} to let you know when new items are available.`
+            str = `Oye ${fname.value}, you have been granted access to exclusive products!<br> We will text you at ${pNum.value} to let you know when new items are available.<br><a href="#products">Go Back To Current Stock</a>`;
         }
+        tSecOne.classList.add("hidden");
+        tSecTwo.classList.add("hidden");
+        proto.classList.remove("hidden");
+        nuke.classList.remove("hidden");
         valForm.classList.remove("hidden");
-        valForm.innerHTML = str
+        valForm.innerHTML = str;
+    }else {
+        tSecOne.classList.remove("hidden");
+        tSecTwo.classList.remove("hidden");
+        proto.classList.add("hidden");
+        nuke.classList.add("hidden");
+        valForm.classList.add("hidden"); 
     }
 }
         
