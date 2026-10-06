@@ -436,8 +436,9 @@ address {
 address p {
     color: var(--almostWhite);
     font-family: var(--fontOther);
-    font-weight: 600;
-    line-height: 1em;
+    font-weight: 200;
+    font-size: .8em;
+    line-height: 1.1em;
     
 }
 
@@ -446,6 +447,7 @@ address a {
     color: var(--gold);
     font-family: var(--fontOther);
     font-weight: 600;
+    line-height: 1.1em;
 }
 
 section.night {
@@ -488,3 +490,10 @@ div.hidden {
     display: none;
 }
 
+label, legend {
+    padding-top: 10px;
+}
+
+#formSubmit {
+    margin-top: 20px;
+}

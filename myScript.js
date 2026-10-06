@@ -127,7 +127,7 @@ function formValidation(e){
     }
 }
 
-//shoppingCart
+//shoppingCart & checkout
 let prod = {
     capButton: {
         price: 8750.00,
@@ -164,6 +164,12 @@ let subTotalAmt = 0.00;
 let totalPrice;
 let itemOut = "";
 
+function checkoutAlert(cost) {
+    window.alert(`The shuttle with your selected items is being sent to your ship.
+        Your account will be charged ${cost}.
+        Thank you and stay safe out there!`)
+}
+
 function fillCart(e){
     console.log(e.target.id);
     let selection = e.target.id
@@ -190,6 +196,13 @@ let buttonList = [capButt, mugButt, devilButt, protoButt, nukeButt];
 function resetProd(e) {
     for(let i of buttonList) {
         i.classList.remove("hidden");
+    }
+    if(e.target.id == "checkout") {
+        if(totalPrice != 0){
+            window.alert(`The shuttle with your selected items is being sent to your ship.
+            Your account will be charged ¥${totalPrice.toFixed(2)}.
+            Thank you and stay safe out there!`)
+        }
     }
     itemOut = "";
     subTotalAmt = 0;
