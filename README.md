@@ -26,6 +26,7 @@ materials, instructor examples, documentation, and my own work.
 
 ## Debugging Log
 
-###
+### Problem 1
+
 
 
