@@ -21,7 +21,7 @@ materials, instructor examples, documentation, and my own work.
 
 ### Day 3
 - added alert message when user clicks checkout, only triggers if cart is not empty.
-- added styling for <ul> in cart to negate other dark mode styles from taking effect when dark mode enabled.
+- added styling for `<ul>` element in cart to negate other dark mode styles from taking effect when dark mode enabled.
 - fixed price display to always show two, and only two decimal places.
 
 ## Debugging Log
