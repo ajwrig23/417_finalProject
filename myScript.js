@@ -163,16 +163,15 @@ let subTotalAmt = 0.00;
 let totalPrice;
 let itemOut = "";
 
-function checkoutAlert(cost) {
-    window.alert(`The shuttle with your selected items is being sent to your ship.
-        Your account will be charged ${cost}.
-        Thank you and stay safe out there!`)
+
+function thouSep(x) {
+    return x.toLocaleString("en-US", {minimumFractionDigits: 2, maximumFractionDigits: 2});
 }
 
 function fillCart(e){
     console.log(e.target.id);
     let selection = e.target.id
-    let itemLi = `<li>${prod[selection].name} ¥${Math.round(prod[selection].price)}</li>`
+    let itemLi = `<li>${prod[selection].name} ¥${thouSep(prod[selection].price)}</li>`
     // let itemPush = items.push(`<li>${prod[selection].name} ¥${prod[selection].price.toFixed(2)}</li>`);    
     if(itemOut.indexOf(itemLi) == -1) {
         itemOut += " " + itemLi;
@@ -182,9 +181,9 @@ function fillCart(e){
     subTotalAmt += prod[selection].price;
     console.log(subTotalAmt);
     totalPrice = subTotalAmt + (subTotalAmt * .127) + 100;
-    console.log(totalPrice.toFixed(2));
-    subTot.innerHTML = "¥" + parseFloat(subTotalAmt).toFixed(2);
-    total.innerHTML = "¥" + parseFloat(totalPrice).toFixed(2);
+    console.log(totalPrice);
+    subTot.innerHTML = `¥${thouSep(subTotalAmt)}`;
+    total.innerHTML = `¥${thouSep(totalPrice)}`;
 }
 let capButt = document.getElementById("capButton");
 let mugButt = document.getElementById("mugButton");
@@ -199,7 +198,7 @@ function resetProd(e) {
     if(e.target.id == "checkout") {
         if(totalPrice != 0){
             window.alert(`The shuttle with your selected items is being sent to your ship.
-            Your account will be charged ¥${totalPrice.toFixed(2)}.
+            Your account will be charged ¥${thouSep(totalPrice)}.
             Thank you and stay safe out there!`)
         }
     }
