@@ -24,6 +24,11 @@ materials, instructor examples, documentation, and my own work.
 - added styling for `<ul>` element in cart to negate other dark mode styles from taking effect when dark mode enabled.
 - fixed price display to always show two, and only two decimal places.
 
+### Day 4
+- added thousands separator formatter.
+- cleaned and commented javascript code.
+- adjusted and finalized styles for cart.
+
 ## Debugging Log
 
 ### Problems 1 and 2
