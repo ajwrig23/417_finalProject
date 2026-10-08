@@ -289,18 +289,34 @@ div.TS {
     width: 200px;
     background-color: var(--bluegray);
     justify-self: right;
-    justify-items: center;
+    justify-content: center; 
     align-items: center;
+    align-content: start;
     position: relative;
+}
+
+#cart ul {
+    position:absolute;
+    top:150px;
+    justify-self: center;
+    justify-items: center;
+    text-align: center;
+    align-items: center;
+}
+
+#cart li {
+    margin-bottom: 10px;
 }
 
 #cart article {
     display: grid;
     grid-template-columns: 90px 90px;
-    gap: 10px 20px;
+    gap: 10px 30px;
     justify-items: right;
+    align-items: center;
     border-top: 3px solid var(--gold);
-    padding-top: 15px;
+    padding: 15px 3px 0px;
+    margin-top: 20px;
     position: absolute;
     bottom: 60px;
 }
@@ -333,12 +349,9 @@ div.TS {
     border-color: var(--gold);
 }
 
-#cart ul {
-    justify-items: right;
-}
 
-#cart li {
-    padding: 10px 0px;
+strong {
+    font-weight: bold;
 }
 
 #cart span{
